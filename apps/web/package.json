@@ -1,0 +1,50 @@
+{
+  "name": "@ever-works/web",
+  "version": "0.1.0",
+  "description": "Ever Works general-purpose website template — marketing, landing & content pages (Next.js App Router).",
+  "license": "AGPL-3.0",
+  "homepage": "https://ever.works",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ever-works/web-template.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ever-works/web-template/issues"
+  },
+  "author": {
+    "name": "Ever Co. LTD",
+    "email": "ever@ever.co",
+    "url": "https://ever.co"
+  },
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "clean": "rm -rf .next node_modules .turbo"
+  },
+  "dependencies": {
+    "clsx": "^2.1.1",
+    "gray-matter": "^4.0.3",
+    "lucide-react": "^0.548.0",
+    "next": "^16.2.6",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "react-markdown": "^10.1.0",
+    "remark-gfm": "^4.0.1",
+    "tailwind-merge": "^3.4.1"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3.2.0",
+    "@tailwindcss/postcss": "^4.2.4",
+    "@types/node": "^22.10.0",
+    "@types/react": "19.2.7",
+    "@types/react-dom": "19.2.3",
+    "eslint": "^9.18.0",
+    "eslint-config-next": "^16.2.6",
+    "tailwindcss": "^4.2.4",
+    "typescript": "^5.7.3"
+  }
+}
