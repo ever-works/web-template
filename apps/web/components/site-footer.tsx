@@ -4,7 +4,7 @@ import { Container } from '@/components/ui/container';
 
 export function SiteFooter() {
   return (
-    <footer className="border-t border-border bg-muted/40">
+    <footer data-component="site-footer" className="border-t border-border bg-muted/40">
       <Container className="py-14">
         <div className="grid gap-10 md:grid-cols-[1.5fr_repeat(3,1fr)]">
           <div>

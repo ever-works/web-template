@@ -4,7 +4,7 @@ import { Container } from '@/components/ui/container';
 export function HowItWorks() {
   const { steps } = siteConfig;
   return (
-    <section id="how-it-works" className="py-24 sm:py-28">
+    <section id="how-it-works" data-component="how-it-works" className="py-24 sm:py-28">
       <Container>
         <div className="mx-auto max-w-2xl text-center">
           <p className="text-sm font-semibold text-primary">{steps.eyebrow}</p>
@@ -14,7 +14,7 @@ export function HowItWorks() {
 
         <div className="mt-16 grid gap-8 sm:grid-cols-3">
           {steps.items.map((step, i) => (
-            <div key={step.title} className="relative">
+            <div key={step.title} data-component="step" className="relative">
               <div className="grid h-10 w-10 place-items-center rounded-full bg-primary text-sm font-bold text-primary-foreground">
                 {i + 1}
               </div>

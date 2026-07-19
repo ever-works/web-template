@@ -1,5 +1,8 @@
 import type { Metadata } from 'next';
 import './globals.css';
+// Plain-CSS override surface, loaded AFTER globals so it wins. This is the file
+// Ever Works AI customization edits — keep it plain CSS (no Tailwind directives).
+import '../src/styles/theme.css';
 import { siteConfig } from '@/lib/site.config';
 import { SiteHeader } from '@/components/site-header';
 import { SiteFooter } from '@/components/site-footer';

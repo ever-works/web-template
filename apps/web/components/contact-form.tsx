@@ -23,6 +23,7 @@ export function ContactForm() {
 
   return (
     <form
+      data-component="contact-form"
       onSubmit={(e) => {
         e.preventDefault();
         setSent(true);

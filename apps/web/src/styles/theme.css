@@ -1,0 +1,32 @@
+/*
+ * Custom theme overrides.
+ *
+ * This file is plain CSS, imported AFTER the framework styles (app/globals.css),
+ * so anything here wins. It is the surface that Ever Works AI customization edits
+ * — and the ONLY file a customization run commits. Keep it plain CSS: no Tailwind
+ * directives (@apply, @theme, @tailwind, @reference, …), or the build breaks.
+ *
+ * Re-tint the whole site by overriding the design tokens under :root (light) and
+ * :root.dark (dark — the template toggles the `.dark` class on <html>). Every
+ * utility (bg-primary, text-muted-foreground, rounded-xl, …) reads these, so a
+ * few overrides restyle everything. Uncomment and edit:
+ */
+
+/*
+:root {
+  --color-primary: #4f46e5;
+  --color-primary-foreground: #ffffff;
+  --color-accent: #ec4899;
+  --radius-xl: 1rem;
+}
+
+:root.dark {
+  --color-primary: #818cf8;
+  --color-accent: #f472b6;
+}
+*/
+
+/* Component hooks are also available for finer control, e.g.:
+[data-component="hero"] [data-part="title"] { letter-spacing: -0.02em; }
+[data-component="pricing-card"][data-featured] { transform: scale(1.02); }
+*/

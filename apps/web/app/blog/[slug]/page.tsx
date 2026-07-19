@@ -28,7 +28,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
   if (!post) notFound();
 
   return (
-    <article className="py-24 sm:py-28">
+    <article data-component="blog-post" className="py-24 sm:py-28">
       <Container className="max-w-3xl">
         <Link
           href="/blog"

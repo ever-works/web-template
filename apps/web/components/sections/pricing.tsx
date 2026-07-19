@@ -7,7 +7,7 @@ import { cn } from '@/lib/utils';
 export function Pricing() {
   const { pricing } = siteConfig;
   return (
-    <section id="pricing" className="py-24 sm:py-28">
+    <section id="pricing" data-component="pricing" className="py-24 sm:py-28">
       <Container>
         <div className="mx-auto max-w-2xl text-center">
           <p className="text-sm font-semibold text-primary">{pricing.eyebrow}</p>
@@ -19,6 +19,8 @@ export function Pricing() {
           {pricing.plans.map((plan) => (
             <div
               key={plan.name}
+              data-component="pricing-card"
+              data-featured={plan.highlighted || undefined}
               className={cn(
                 'flex flex-col rounded-2xl border p-8',
                 plan.highlighted

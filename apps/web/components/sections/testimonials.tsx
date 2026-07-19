@@ -4,7 +4,7 @@ import { Container } from '@/components/ui/container';
 export function Testimonials() {
   const { testimonials } = siteConfig;
   return (
-    <section className="border-y border-border bg-muted/30 py-24 sm:py-28">
+    <section data-component="testimonials" className="border-y border-border bg-muted/30 py-24 sm:py-28">
       <Container>
         <div className="mx-auto max-w-2xl text-center">
           <p className="text-sm font-semibold text-primary">{testimonials.eyebrow}</p>
@@ -15,6 +15,7 @@ export function Testimonials() {
           {testimonials.items.map((t) => (
             <figure
               key={t.author}
+              data-component="testimonial-card"
               className="flex flex-col rounded-2xl border border-border bg-card p-6"
             >
               <blockquote className="flex-1 text-sm leading-relaxed">“{t.quote}”</blockquote>

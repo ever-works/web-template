@@ -23,7 +23,7 @@ const ICONS: Record<string, LucideIcon> = {
 export function Features() {
   const { features } = siteConfig;
   return (
-    <section id="features" className="py-24 sm:py-28">
+    <section id="features" data-component="features" className="py-24 sm:py-28">
       <Container>
         <div className="mx-auto max-w-2xl text-center">
           <p className="text-sm font-semibold text-primary">{features.eyebrow}</p>
@@ -37,13 +37,14 @@ export function Features() {
             return (
               <div
                 key={item.title}
+                data-component="feature-card"
                 className="rounded-2xl border border-border bg-card p-6 transition-shadow hover:shadow-md"
               >
-                <div className="grid h-11 w-11 place-items-center rounded-xl bg-primary/10 text-primary">
+                <div data-part="icon" className="grid h-11 w-11 place-items-center rounded-xl bg-primary/10 text-primary">
                   <Icon className="h-6 w-6" />
                 </div>
-                <h3 className="mt-5 text-lg font-semibold">{item.title}</h3>
-                <p className="mt-2 text-sm text-muted-foreground">{item.description}</p>
+                <h3 data-part="title" className="mt-5 text-lg font-semibold">{item.title}</h3>
+                <p data-part="description" className="mt-2 text-sm text-muted-foreground">{item.description}</p>
               </div>
             );
           })}

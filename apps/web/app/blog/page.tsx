@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 export default function BlogIndexPage() {
   const posts = getAllPosts();
   return (
-    <section className="py-24 sm:py-28">
+    <section data-component="blog-list" className="py-24 sm:py-28">
       <Container className="max-w-3xl">
         <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">Blog</h1>
         <p className="mt-4 text-muted-foreground">
