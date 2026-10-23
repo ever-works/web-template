@@ -8,14 +8,17 @@
 #   - `installer` → `pnpm install --frozen-lockfile` then `next build` (standalone).
 #   - `runner`    → minimal node image running the standalone server on :3000.
 
-ARG NODE_VERSION=22-alpine
+ARG NODE_VERSION=26.12.1-alpine
 ARG PNPM_VERSION=10.31.0
 ARG TURBO_VERSION=2.9.14
 
 # ---- base ------------------------------------------------------------------
 
 FROM node:${NODE_VERSION} AS base
-RUN corepack enable && \
+# Node 25+ no longer ships corepack (on node:26-alpine a bare `corepack enable` exits 127),
+# so install it from npm first.
+RUN npm install -g corepack@0.36.0 && \
+    corepack enable && \
     corepack prepare pnpm@${PNPM_VERSION} --activate && \
     npm install -g turbo@${TURBO_VERSION}
 
